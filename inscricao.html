@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- PL03 · Gonçalo Fernandes · nº 2022148 · 2026-11-04 -->
+<html lang="pt-PT">
+<html xmlns="https://httpbin.org/get"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de inscrição</title>
+</head>
+<body>
+    <h3>Formulário de inscrição</h3>
+    <form action="inscricao.html" method="post">
+        <p>Nome completo:
+            <input id="txtCompletedName" name="txtCompletedName" type="text" maxlength="100" />
+        </p>
+        <p>Email:
+            <input id="txtEmail" name="txtEmail" type="email" />
+        </p>
+        <p>Número de estudante: 
+            <input id="txtStudentNumber" name="txtStudentNumber" type="text" maxlength="10" />
+        </p>
+        <p>Data de nascimento:
+            <input id="txtBirthDate" name="txtBirthDate" type="date" />
+        </p>
+        <p>Curso:
+            <select name="slbCourse">
+                <option value="LEI" selected="selected">LEI</option>
+                <option value="DS">DS</option>
+                <option value="DPM">DPM</option>
+            </select>
+        </p>
+        <p>Turno:
+            <input type="radio" name="rdTurno" value="Diurno" />Diurno
+            <input type="radio" name="rdTurno" value="Pós-Laboral" />Pós-Laboral
+        </p>
+        <p>Selecione as áreas de interesse:
+            <br />
+            <input type="checkbox" name="chkWeb" value="Web" />Web<br />
+            <input type="checkbox" name="chkAI" value="Artificial Intelligence" />AI<br />
+            <input type="checkbox" name="chkCybercecurity" value="Cybersecurity" />Cybersecurity<br />
+        </p>
+        <p>Mensagem:
+            <br />
+            <textarea id="taMessage" name="taMessage" cols="20" rows="4" placeholder="Digite sua mensagem aqui..." maxlength="300"></textarea>
+        </p>
+        <p>Regras de inscrição:
+            <br />
+            <input type="checkbox" name="chkRules" value="Li e aceito as regras do workshop" />Li e aceito as regras do workshop
+        </p>
+        <button type="submit">Inscrever</button>
+           <button type="reset">Limpar</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2026 Gonçalo Fernandes</p>
+        <p>Tecnologias da Internet I</p>
+    </footer>
+</body>
+</html>
