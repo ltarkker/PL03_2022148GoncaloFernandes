@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- PL03 · Gonçalo Fernandes · nº 2022148 · 2026-11-04 -->
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de contacto (corrigido)</title>
+</head>
+<body>
+    <h1>Pedido de contacto</h1>
+    <form action="https://httpbin.org/get" method="get">
+        <p>
+            <!-- 1: o for do label tem de ser igual ao id do campo -->
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome">
+        </p>
+        <p>
+            <!-- 2: o placeholder não substitui o label -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="nome@exemplo.pt">
+        </p>
+        <p>
+            <!-- 3: um telemóvel não é um número para fazer contas -->
+            <label for="tel">Telemóvel</label>
+            <input type="tel" id="tel" name="tel">
+        </p>
+        <!-- 4: os rádios do mesmo grupo partilham o name, dentro de um fieldset -->
+        <fieldset>
+            <legend>Preferência de contacto</legend>
+            <label><input type="radio" name="pref" value="email"> Email</label>
+            <label><input type="radio" name="pref" value="tel"> Telefone</label>
+        </fieldset>
+        <p>
+            <!-- 5: sem name o campo não é enviado -->
+            <label for="assunto">Assunto</label>
+            <textarea id="assunto" name="assunto"></textarea>
+        </p>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
